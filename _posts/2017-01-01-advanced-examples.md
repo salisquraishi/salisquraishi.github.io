@@ -1,5 +1,5 @@
 ---
-title:  "Advanced examples"
+title:  "Advanced examples about how backprogagaion works in deep neural network"
 mathjax: true
 layout: post
 ---
