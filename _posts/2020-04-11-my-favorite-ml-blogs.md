@@ -3,8 +3,11 @@ title: "My favorite blogs on Machine Learning"
 layout: post
 ---
 
-# My Favorite Blogs on ML & AI
+I really like to play with data, I am learning Deep learning and I want to crack one of the greatest job available in India. 
 
+
+
+<!-- I am not putting anything here -->
 #### [Kevin's Blog](https://kevinzakka.github.io/)
 The blog explains KNN mathematics very nicely and has some rich content about deep learning. 
 
