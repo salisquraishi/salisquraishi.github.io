@@ -1,7 +1,6 @@
 ---
 title:  "Entropy Cross-entropy and mathematical meaning of information"
 layout: post
-published: false
 mathjax: true
 ---
 
