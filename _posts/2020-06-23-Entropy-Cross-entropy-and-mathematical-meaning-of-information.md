@@ -2,6 +2,7 @@
 title:  "Entropy Cross-entropy and mathematical meaning of information"
 layout: post
 mathjax: true
+published: true
 ---
 
 > I this article I tried to present a classical and in-depth explanation of *entropy* and *cross-entropy* and their relationships with uncertainty or probability.   
