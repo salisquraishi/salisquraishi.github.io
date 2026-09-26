@@ -9,5 +9,4 @@ I write my thoughts, notes and learnings in this blog.
 
 # Contacts
 Email: salisquraishi@gmail.com  
-LinkedIn: [https://www.linkedin.com/in/salisquraishi](https://www.linkedin.com/in/salisquraishi)  
-Phone: +91 9970008420    
+LinkedIn: [https://www.linkedin.com/in/salisquraishi](https://www.linkedin.com/in/salisquraishi) 
