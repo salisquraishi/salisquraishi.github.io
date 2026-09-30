@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Entropy Cross-entropy and mathematical meaning of information · Salis
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Salis">
+<meta name="description" content="
+I this article I tried to present a classical and in-depth explanation of entropy and cross-entropy and their relationships with uncertainty or probability.
+
+
+  Information and Uncertainty
+  
+    
+    Link to heading
+  
+
+Would you really be surprised if I told you that tomorrow sun will rise from east? In another scenario, how would you react if you came to know that a military chopper is going to land on your neighbourhood? There is no doubt that former event is certainly going to happen, and your reply might be, &ldquo;Well !!, What&rsquo;s new into that?&rdquo; and in a latter situation you might come out of your home exclaiming &ldquo;Wait.. What.. Chopper!! When, Why, Does anyone have any clue?&rdquo;. Now think again, which event carries more information for you? Here, considering information as a meaning rather than as an amount of information, would really help to establish a connection between information and uncertainty.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Entropy Cross-entropy and mathematical meaning of information">
+	<meta name="twitter:description" content="I this article I tried to present a classical and in-depth explanation of entropy and cross-entropy and their relationships with uncertainty or probability.
+Information and Uncertainty Link to heading Would you really be surprised if I told you that tomorrow sun will rise from east? In another scenario, how would you react if you came to know that a military chopper is going to land on your neighbourhood? There is no doubt that former event is certainly going to happen, and your reply might be, “Well !!, What’s new into that?” and in a latter situation you might come out of your home exclaiming “Wait.. What.. Chopper!! When, Why, Does anyone have any clue?”. Now think again, which event carries more information for you? Here, considering information as a meaning rather than as an amount of information, would really help to establish a connection between information and uncertainty.">
+
+<meta property="og:url" content="http://localhost:1313/posts/2020-06-23-entropy-cross-entropy-and-mathematical-meaning-of-information/">
+	<meta property="og:site_name" content="Salis">
+	<meta property="og:title" content="Entropy Cross-entropy and mathematical meaning of information">
+	<meta property="og:description" content="I this article I tried to present a classical and in-depth explanation of entropy and cross-entropy and their relationships with uncertainty or probability.
+Information and Uncertainty Link to heading Would you really be surprised if I told you that tomorrow sun will rise from east? In another scenario, how would you react if you came to know that a military chopper is going to land on your neighbourhood? There is no doubt that former event is certainly going to happen, and your reply might be, “Well !!, What’s new into that?” and in a latter situation you might come out of your home exclaiming “Wait.. What.. Chopper!! When, Why, Does anyone have any clue?”. Now think again, which event carries more information for you? Here, considering information as a meaning rather than as an amount of information, would really help to establish a connection between information and uncertainty.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2020-06-23-entropy-cross-entropy-and-mathematical-meaning-of-information/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Salis
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/2020-06-23-entropy-cross-entropy-and-mathematical-meaning-of-information/">
+              Entropy Cross-entropy and mathematical meaning of information
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              12-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <blockquote>
+<p>I this article I tried to present a classical and in-depth explanation of <em>entropy</em> and <em>cross-entropy</em> and their relationships with uncertainty or probability.</p>
+</blockquote>
+<h2 id="information-and-uncertainty">
+  Information and Uncertainty
+  <a class="heading-link" href="#information-and-uncertainty">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Would you really be surprised if I told you that tomorrow sun will rise from east? In another scenario, how would you react if you came to know that a military chopper is going to land on your neighbourhood? There is no doubt that former event is certainly going to happen, and your reply might be, &ldquo;Well !!, What&rsquo;s new into that?&rdquo; and in a latter situation you might come out of your home exclaiming &ldquo;Wait.. What.. Chopper!! When, Why, Does anyone have any clue?&rdquo;. Now think again, which event carries more information for you? Here, considering information as a meaning rather than as an amount of information, would really help to establish a connection between information and uncertainty.</p>
+<p>We can clearly be convinced from above examples that probability(a measure of uncertainty) has a close association with information (i.e. meaning or conclusion we derive from the information we receive). The very fact sun will rise from east tomorrow is a less surprised more probable (in fact a certain event unless today is a dooms day) event which gives no new information or no information to be precise. In another case, the pleasantly surprised really improbable event that a chopper is going to land in your locality carries a lot of new information such as why it&rsquo;s landing, where and how.</p>
+<p>Once we settle down with the fact that there is no information if there is no uncertainty or more uncertainty brings more information. We can say that information is inversely proportional to probability, i.e. a less probable event has more information.</p>
+<p>$$Information \propto \frac{1}{Probability}$$</p>
+<p>Cloude Shannon is the father of mathematical disciple known as <em>Information Theory</em> which mainly deals with all the aspects of communication and storage of information. In 1948, Shannon presented a breakthrough and celebrated paper on information theory titled <em>&ldquo;A Mathematical Theory of Communication&rdquo;</em>. Shannon&rsquo;s quest was to quantify the amount of information from uncertainty. In other words, his effort was to find a measure of information and define that measure of information as the measure of uncertainty and he zeroed on to a really convincing solution - measure information as a function of probability.</p>
+<p>$$H=-\sum_i p_ilog(p_i)$$</p>
+<p>where $p_i$ is probability of an event, message, status, outcomes whatever.</p>
+<p>Shannon needed a new unit of measure and a name. He coined the term &ldquo;<em>bits</em>&rdquo; which stands for &ldquo;<em>binary digits</em>&rdquo;, a smallest possible quantity of of information, For example, tossing a coin results in either head or tail(without bayesian thought process of course), to describe the outcome a minimum one bit is required which would be either 1 or 0. Also, he called H &ldquo;<em>Entropy</em>&rdquo;, a unit of information which would be measured in &ldquo;<em>bits</em>&rdquo;. If you want to give one liner statement about entropy, &ldquo;<em>Entropy is information</em>&rdquo; would be very precise choices of words.</p>
+<p>Let&rsquo;s next try to understand Shannon&rsquo;s formula of information (Entropy) in the light of probability theory.</p>
+<h2 id="entropy-and-information">
+  Entropy and Information
+  <a class="heading-link" href="#entropy-and-information">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>As we know a random variable X describes the outcome of an experiment as a numerical value. For example flipping a coin, the outcome ${H,T}$ makes random variable $X$ takes ${0,1}$ respectively. The probability mass function (PMF) associated with any random variable $X$ is defined as $$p(x)$$.</p>
+<p>The entropy $H(X)$, which is a measure of uncertainty of a discrete random variable $X$ is defined by:</p>
+<p>$$H(X) = -\sum_xp(x)log_2p(x)$$</p>
+<p><em>Note: Conventionally $H(p)$ is a more commonly used notation used in place of $H(X)$.</em></p>
+<p>Another way to describe $H(X)$ is that it is an expected value of a random variable $log(1/p(x))$. My advice would be to take a pause here and review the concept of <em>Expectations</em> in probability.</p>
+<p>Now, let me tell you the intuition behind the reason of calculating entropy $H(X)$ of a random variable $X$. It quantifies the average description length needed to describe a random variable in bits, which is also a minimum bits required to describe a random variable (Bingo!! The first data compression idea, see example that follows in the next paragraph).</p>
+<p>Another important fact is that it gives you a whole new way comparing two or more probability distributions. If entropies of two probability distributions $p(x)$ and $q(y)$ are $H(p(x))$ and $H(q(y))$ respectively, and if former is greater or smaller than the latter then this difference in their entropies is also a quantity which tells us that how far or close both distributions are. Here comes the idea of <em>cross entropy</em> (more on this soon).</p>
+<p>Let&rsquo;s try to understand the average amount of information required to describe a random variable with an example. We know that $n$ binary digits can convey at max $2^n$ independent information (do the math please). Suppose you have a fitness tracker which tracks different health measurements of your body such as blood pressure, pulse rate, heart rate etc and based of those several measurements the device categorizes body&rsquo;s overall health status in $8$ different categories, and sends the health status to the cloud storage for further analysis.Also, keep in mind that eight different status is nothing but eight possible outcomes from a probability distribution of an event.</p>
+<p>Now, consider two assumptions and entropies associated with them below,</p>
+<p>Assumption A: All $8$ events are equaly likely.</p>
+<p>$$p(x) = {\frac18, \frac18, \frac18, \frac18, \frac18, \frac18, \frac18,\frac18}$$</p>
+<p>Therefore, the entropy in this case (in bits) is 3 bits.</p>
+<p>$$H(X) = -\sum_{x=1}^8p(x)log_2(p(x)) = -\sum_{x=1}^8(\frac18)log_2(\frac18) = 3 bits$$</p>
+<p>Assumption B: All $8$ events are NOT equally likely.</p>
+<p>$$p(x) = {\frac12, \frac14, \frac18, \frac1{16},
+\frac1{64}, \frac1{64}, \frac1{64}, \frac1{64}}$$</p>
+<p>therefore, the entropy in this case is 2 bits.</p>
+<p>$$H(X) = -\sum_{x=1}^8p(x)log_2(p(x))$$</p>
+<p>$$
+= \frac12log\frac12 + \frac14log\frac14 + \frac18log\frac18 + \frac1{16}log\frac1{16}</p>
+<ul>
+<li>\frac1{64}log\frac1{64} + \frac1{64}log\frac1{64} + \frac1{64}log\frac1{64}
+$$</li>
+</ul>
+<p>$=2bits$</p>
+<p>The important conclusion we can draw from our study of above two assumptions is that if we know the probability of events then there is an optimised way to describe the information, in above example we can see that there could be a way to encode (i.e. describe) the same information in lesser amount of bits. If we could find the way to do that then this will save us one bit per message per transmission. In above example, if tracker sends the status information to cloud every minute then we will only 1440*2=2880 bits per day instead of 1440*3=4320 bits and we will be able to save 4320 - 2880 = 1440 bits per day in network bandwidth and storage.</p>
+<p>So one simple way to achieve that is to describe less probable health status in a longer string of bits and more probable one in a shorter one. In that way frequent health status will be transmitted more often and will use less bandwidth in a long run and the same applies to less frequent health status. So the idea is simple, choose variable length strings of bits for different outcomes.</p>
+<p>The entropy for above example has given us the estimate that 2 bits per message transmission is the average information length we would consume in a long run. So lets encode the eight possible health status (outcomes) in such a way that the average length of bit strings is 2 bits. We can choose 1, 2, 3, 4 and 6 bits long string to represent those status in binary digits. Take a look at one sample of such encoded health status arrangement below.</p>
+<p>$$A : 0$$<br>
+$$B : 01$$<br>
+$$C : 0001$$<br>
+$$D : 0101$$<br>
+$$E : 010101$$<br>
+$$F : 101010$$<br>
+$$G : 111000$$<br>
+$$H : 111111$$<br></p>
+<p>since the average length of all eight encoded status would come as 2 (1+2+3+4+6/8 = 2), and going with above choice we can encode more frequent events (high probable outcome) in shorter strings, say 1 or 2 bits string and more frequent (less probable outcome) in a longer strings, say 4 or 6 bit strings. For instance, outcomes with probabilities 1/2 and 1/4 could be represented in one bit such as 0 and 1 respectively and outcomes with probabilities 1/16 and 1/64 in 6 bits such as 111000 101010 respectively.</p>
+<h2 id="cross-entropy-and-probability-distributions">
+  Cross-entropy and probability distributions
+  <a class="heading-link" href="#cross-entropy-and-probability-distributions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>One thing should be clear by now is that entropy is a meausure of average uncertainty in the random variable or the amount of information required on average to describe the random variable. We can also say that entropy bridges between information and probability(i.e. uncertainty).</p>
+<p>If we want to focus our attention on two probability distributions rather than just one, then we may like to ask a question, how similar or dissimilar both distributions are? Having gained some knowledge about entropy, we can compare them with their respective entropies. For instance, $H(p)$ and $H(q)$ are the entropies of two sample probability distributions p and q which is assumed to have come from the same population. Therefore, there is is possibility that both entropies will vary, it depends how well the sampling has been done, but that&rsquo;s not our focus here, our focus is that if p represents true population probability better than q does then the entropy of q $H(q)$ would be higher than that of p, we just want to quantify that difference. Mathematically we can write it as below.</p>
+<p>$$H(q) = H(p) + Difference$$</p>
+<p>That means if we were able to guage the difference(i.e. distance) we can compare two probabilities. If the difference is close the Zero then we can conclude that both the probabilities are almost same and represents true population distribution.</p>
+<p><em>Relative Entropy</em> also knows as <em>Kullback-Leibler distance</em> measures the distance between two probability distribution and is defined as</p>
+<p>$$D(p||q) = \sum_xp(x)log(p(x)/q(x))$$</p>
+<p>That makes sense, as we can see if $p = q$, then $D(p||q) = 0$</p>
+<p>Another perception of relative entropy, could be that it is a <em>measure of the inefficiency</em> of interpreting q as a true representation of a population distribution when in fact it is p. The price we pay for that wrong assumption is that we encode the information (entropy in bits) based on q distribution which will end up in higher bits estimation.</p>
+<p>$$H(q) = H(p) + D(p||q)$$</p>
+<p>$$H(q) = -\sum p(x)log(p(x)) + \sum p(x)log(p(x)/q(x))$$</p>
+<p>$$H(q) = -\sum p(x)log(p(x)) + \sum p(x)log(p(x)) - \sum p(x)log(q(x))$$</p>
+<p>$$H(p,q) = -\sum p(x)log(q(x))$$</p>
+<p>Above equation is called <em>Cross Entropy</em> or <em>Kullback-Leibler Divergence</em> and is a function of two probability distribution variables p and q, hence the change in notation from $H(q)$ to $H(p,q)$. This equates to $H(p)$ when $p=q$, which is nothing but the <em>entropy</em> of true representation of population distribution, which is p. The important point to note is that $H(p)$ is the lower bound of cross entropy.</p>
+<h2 id="loss-function-in-machine-learning">
+  Loss function in Machine Learning
+  <a class="heading-link" href="#loss-function-in-machine-learning">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>instead of <em>Machine Learning</em> I wanted to use the term <em>Statistical Learning</em>  but sometime it&rsquo;s better to prefer popularity over literature.</p>
+<p>Cross entropy found it&rsquo;s way into the world of Machine Learning. This is cleverly used in a classification algorithm to estimate the difference between two probability distribution and is commonly referred as <em>loss</em>. The training data which is assumed to be a true representation of the population distribution is compared with the less perfect probability distribution estimated by the model. A greater difference in probability distributions implies that model&rsquo;s ability to predict correct distribution (i.e. class) is poor therefore the model weights needs to be tuned with some optimisation algorithm such as <em>Gradient Descent</em> until that difference could me made as minimum as possible.</p>
+<p>In any classification problem a model is presented with training data which is a combination of <em>features</em> and <em>labels</em>. Let&rsquo;s consider only binary classification problem where machine learning model&rsquo;s aim is to estimate the probability of a positive class for a given data point. $p$ represents a true population distribution and model&rsquo;s estimated probability distribution is defined by say $\hat{p}$ (read p-hat). What we want for our model is to give us $\hat{p}$ as close to $p$ as possible. i.e. we want $H(\hat{p})$ to reach as close to $H(\hat{p})$ as possible.</p>
+<p>Therefore, <em>Cross Entropy</em> is the way forward. We keep measuring the difference between $p$ and $\hat{p}$ in a regular interval, that is called training cycle or epoch. Let&rsquo;s go through a formal equation of cross entropy for a binary classification model.</p>
+<p>Below is our cross entropy equation for two probability distributions p and q.</p>
+<p>$$H(p,q) = -\sum_{x \in {1,0}} p(x)log(q(x))$$
+<br></p>
+<p>It&rsquo;s Bernoulli distribution with probability of success $p$ and failure $1-p$.</p>
+<p>$$p(x)=p(X=x) = p^x(1-p)^{1-x}; x \in  {0,1}$$
+<br></p>
+<p>Similarly for model&rsquo;s prediction it&rsquo;s $\hat{p}$ and $1-\hat{p}$.</p>
+<p>$$q(x) = q(X=x) = \hat{p}^x(1-\hat{p})^{1-x}; x \in  {0,1}$$
+<br></p>
+<p>Let&rsquo;s put there probabilities together and expand $H(p,q)$.</p>
+<p>$$H(p,\hat{p}) = -\lbrack(p)log(\hat{p}) - (1-p)log(1-\hat{p})\rbrack$$</p>
+<p>Above equation which is a function of two probability distributions needs to be minimized and commonly referred as <em>loss function</em> or <em>cross entropy loss</em> to be very precise with a new notation.</p>
+<p>$$L_{CE}(y,\hat{y}) = -\lbrack (y)log(\hat{y}) - (1-y)log(1-\hat{y})\rbrack$$</p>
+<p>One immediate benefit of this new name is that it reminds us our main goal - that it&rsquo;s actually a loss which needs to be minimized. The function is at it&rsquo;s minimum when $y =$ $\hat{y}$ or in other words when $y$ $\rightarrow$ $\hat{y}$.</p>
+<p>Let&rsquo;s test it through one example, suppose for a given data point $x$ the true label is 1 and our one model estimated the probability that it belongs to that label as 0.7 and another model estimated as 0.3.</p>
+<p>In the first case (when it&rsquo;s a good model),</p>
+<p>$y=1$ and $\hat{y}=0.7$, therefore the the loss $L(y,\hat{y})=0.357$</p>
+<p>In the second case (When it&rsquo;s a bad model),</p>
+<p>$y=1$ and $\hat{y}=0.3$, therefore the the loss $L(y,\hat{y})=1.204$</p>
+<p>It seems perfect, loss function showing greater loss when model made a poor judgement and that&rsquo;s all we need to assess the model, that means second model needs lot of tuning on weights.</p>
+<h2 id="summary">
+  Summary
+  <a class="heading-link" href="#summary">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Entropy is information or missing information, it&rsquo;s a measure of uncertainty and it has it&rsquo;s root on thermodynamics. It was mathematician John von Neumann who had suggested the name <em>Entropy</em> to Cloude Shannon when he was about the publish his paper on <em>Information Theory</em>. It is quite confusing and difficult to comprehend that uncertainty of an event has some relationship with the information gain or loss, just like my mom would never agree on relationship between time and space or just like elementary students of math would find it surprising to learn that gradient and velocity actually refers to the same entity.</p>
+<p>In order to understand why <em>cross entropy</em> works as a <em>loss function</em>, it helps to first understand what entropy serves at the very fundamental level of information and communication and later try to establish a bridge between entropy, information and probability. Finally it would be much easier to fully convince yourself that entropy&rsquo;s ability to quantify the difference between probability distributions made it&rsquo;s way into statistical learning.</p>
+<h2 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Elements of information theory/by Thomas M. Cover, Joy A. Thomas.–2nd ed.</li>
+<li>Information theory and evolution / John Avery.</li>
+<li>The information : a history, a theory, a flood / James Gleick.</li>
+<li><a href="https://en.wikipedia.org/wiki/Information_theory"  class="external-link" target="_blank" rel="noopener">Information theory - Wikipedia</a></li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2026
+     Salis 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
