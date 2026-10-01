@@ -10,13 +10,15 @@
 		
 		
 		
+			<lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
 			<atom:link href="http://localhost:1313/bazm/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title></title>
-				<link>http://localhost:1313/bazm/hatasha-by-vinod-kumar-shukla/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/bazm/hatasha-by-vinod-kumar-shukla/</guid>
-				<description></description>
+				<title>Hatasha se ek vyakti baith gaya tha</title>
+				<link>http://localhost:1313/bazm/hatasha/</link>
+				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/bazm/hatasha/</guid>
+				<description>&lt;p&gt;I heard about Vinod Kumar Shukla when he died and twitter flooded my timeline with his poetry, snippets of poetries and quotes from his novels and stories. I thought to know more about him and searched some details, I was shocked to learned that he was from Rajnandgao. He was honored with top Indian literary award - Sahitya Akademy Award in the year 1999. The town 50 KM from my native. I got interested in his writings and read some pieces. I was completely blown away by his simple yet profound style of expressing complex thoughts.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
