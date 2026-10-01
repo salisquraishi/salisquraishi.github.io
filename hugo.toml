@@ -20,17 +20,18 @@ noClasses = false
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+hardLineBreak = true
 
 [params]
 author = "Salis"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Life's Trail"
 keywords = "blog,developer,personal"
-info = ["Full Stack DevOps", "Magician"]
+#info = ["Life's Trail"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
-since = 2019
+#since = 2026
 # Git Commit in Footer, uncomment the line below to enable it
 commit = "https://github.com/luizdepra/hugo-coder/tree/"
 # Right To Left, shift content direction for languages such as Arabic
@@ -40,9 +41,12 @@ rtl = false
 # "auto" (use preference set by browser)
 # "dark" (dark background, light foreground)
 # "light" (light background, dark foreground) (default)
-colorScheme = "auto"
+colorScheme = "dark"
 # Hide the toggle button, along with the associated vertical divider
 hideColorSchemeToggle = false
+# Hide credits
+hideCredits = true
+hideCopyright = true
 # Series see also post count
 maxSeeAlsoItems = 5
 # Custom CSS
@@ -146,42 +150,17 @@ tag = "tags"
 author = "authors"
 
 [[params.social]]
-name = "Github"
-icon = "fa-brands fa-github fa-2x"
-weight = 1
-url = "https://github.com/johndoe/"
-
-[[params.social]]
-name = "Gitlab"
-icon = "fa-brands fa-gitlab fa-2x"
-weight = 2
-url = "https://gitlab.com/johndoe/"
-
-[[params.social]]
 name = "Twitter"
 icon = "fa-brands fa-x-twitter fa-2x"
 weight = 3
-url = "https://twitter.com/johndoe/"
+url = "https://x.com/salistrail/"
 
 [[params.social]]
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 4
-url = "https://www.linkedin.com/in/johndoe/"
+url = "https://www.linkedin.com/in/salisquraishi/"
 
-[[params.social]]
-name = "Medium"
-icon = "fa-brands fa-medium fa-2x"
-weight = 5
-url = "https://medium.com/@johndoe"
-
-[[params.social]]
-name = "RSS"
-icon = "fa-solid fa-rss fa-2x"
-weight = 6
-url = "https://myhugosite.com/index.xml"
-rel = "alternate"
-type = "application/rss+xml"
 
 [languages.en]
 languageName = ":uk:"
@@ -192,21 +171,21 @@ weight = 1
 url = "about/"
 
 [[languages.en.menu.main]]
-name = "Blog"
+name = "Tech"
 weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "Musings"
 weight = 3
-url = "projects/"
+url = "musings/"
 
 [[languages.en.menu.main]]
-name = "Contact me"
+name = "Bazm"
 weight = 5
-url = "contact/"
+url = "bazm/"
 
-[languages.pt-br]
+#[languages.pt-br]
 languageName = ":brazil:"
 title = "João Ninguém"
 
@@ -235,3 +214,4 @@ url = "projects/"
 name = "Contato"
 weight = 5
 url = "contact/"
+

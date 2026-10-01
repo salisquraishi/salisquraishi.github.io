@@ -10,15 +10,36 @@
 		
 		
 		
-			<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Entropy Cross-entropy and mathematical meaning of information</title>
+				<link>http://localhost:1313/posts/2020-06-23-entropy-cross-entropy-and-mathematical-meaning-of-information/</link>
+				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/2020-06-23-entropy-cross-entropy-and-mathematical-meaning-of-information/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;I this article I tried to present a classical and in-depth explanation of &lt;em&gt;entropy&lt;/em&gt; and &lt;em&gt;cross-entropy&lt;/em&gt; and their relationships with uncertainty or probability.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;information-and-uncertainty&#34;&gt;&#xA;  Information and Uncertainty&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#information-and-uncertainty&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Would you really be surprised if I told you that tomorrow sun will rise from east? In another scenario, how would you react if you came to know that a military chopper is going to land on your neighbourhood? There is no doubt that former event is certainly going to happen, and your reply might be, &amp;ldquo;Well !!, What&amp;rsquo;s new into that?&amp;rdquo; and in a latter situation you might come out of your home exclaiming &amp;ldquo;Wait.. What.. Chopper!! When, Why, Does anyone have any clue?&amp;rdquo;. Now think again, which event carries more information for you? Here, considering information as a meaning rather than as an amount of information, would really help to establish a connection between information and uncertainty.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Hatasha se ek vyakti baith gaya tha</title>
+				<link>http://localhost:1313/musings/hatasha/</link>
+				<pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/musings/hatasha/</guid>
+				<description>&lt;p&gt;I heard about Vinod Kumar Shukla when he died and twitter flooded my timeline with his poetry, snippets of poetries and quotes from his novels and stories. I thought to know more about him and searched some details, I was shocked to learned that he was from Rajnandgao. He was honored with top Indian literary award - Sahitya Akademy Award in the year 1999. The town 50 KM from my native. I got interested in his writings and read some pieces. I was completely blown away by his simple yet profound style of expressing complex thoughts.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>First Post</title>
 				<link>http://localhost:1313/posts/first-post/</link>
 				<pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/first-post/</guid>
 				<description>&lt;p&gt;Hello Hugo!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>About Me</title>
+				<link>http://localhost:1313/about/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/about/</guid>
+				<description>&lt;p&gt;My name is Salis. An engineering graduate and a computer professional who spent almost two decades in technology industry as of Oct 1, 2026. The day I started this blog.&lt;/p&gt;&#xA;&lt;p&gt;I was born and brought up in Indian state Chhattisgarh. My native place is Balod, a small sleepy town approximately 100 KM south west of Chhattisgarh&amp;rsquo;s capital Raipur.&lt;/p&gt;&#xA;&lt;p&gt;I spent my two decades of professional life on tier one cities of India like, Pune, Chennai, Hyderabad, Bengaluru etc, working in tech companies but I am still so much homesick that even the thought of not being able to visit my beautify town Balod, can make me depressed. This is the place I was born, this is the place I would like to breath my last.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
