@@ -5,25 +5,25 @@
     <loc>http://localhost:1313/pt-br/authors/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/authors/"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/authors/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/authors/"
+                hreflang="en"
+                href="http://localhost:1313/authors/"
                 />
   </url><url>
     <loc>http://localhost:1313/pt-br/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/categories/"
+                hreflang="en"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/categories/"
                 />
   </url><url>
     <loc>http://localhost:1313/pt-br/</loc>
